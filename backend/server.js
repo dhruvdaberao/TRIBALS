@@ -25,14 +25,14 @@ const startServer = async () => {
     const httpServer = createServer(app);
 
     const allowedOrigins = [
-      'https://ts-indol.vercel.app', // Production Frontend
+      'https://tribals.vercel.app', // Production Frontend
       'http://localhost:5173',      // Local Vite Frontend
       'http://localhost:3000'       // Local CRA Frontend
     ];
 
     const corsOptions = {
       origin: (origin, callback) => {
-        // Allow requests with no origin (like mobile apps or curl requests) during development
+        // Allow requests with no origin (like mobile apps or curl requests)
         if (!origin || allowedOrigins.indexOf(origin) !== -1) {
           callback(null, true);
         } else {
