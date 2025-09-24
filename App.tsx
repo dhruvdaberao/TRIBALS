@@ -1161,9 +1161,16 @@ const App: React.FC = () => {
     
     if (isInitialLoading) {
         return (
-            <div className="min-h-screen bg-background flex items-center justify-center">
-                <img src="/loader.svg" alt="Loading..." className="w-24 h-24" />
-            </div>
+            // <div className="min-h-screen bg-background flex items-center justify-center">
+            //     <img src="/duckload.gif" alt="Loading..." className="w-24 h-24" />
+                
+            //     <h1>Loading...</h1>
+            // </div>
+            <div className="min-h-screen bg-background flex flex-col items-center justify-center">
+  <img src="/duckload.gif" alt="Loading..." className="w-24 h-24" />
+  <h1 className="mt-4 text-xl font-semibold">Loading...</h1>
+</div>
+
         );
     }
 
